@@ -1,0 +1,73 @@
+.mailing {
+    padding-top: 72px;
+    padding-bottom: 94px;
+}
+
+.mailing__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: var(--footer-main-text-color);
+}
+
+.mailing__actions {
+    display: flex;
+}
+
+.mailing__input {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding: 15px 16px;
+    font-size: 16px;
+    line-height: 12.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+    color: var(--footer-main-text-color);
+    background-color: var(--footer-background-color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .mailing__actions:hover &,
+    .mailing__actions:focus & {
+        border-color: var(--accent-color);
+    }
+}
+
+.mailing__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+        background-color: #FFFFFF;
+    }
+}
+
+.mailing__button-name {
+    margin-right: 10px;
+}
+
+.mailing__icon {
+    fill: #FFFFFF;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .mailing__button:hover &,
+    .mailing__button:focus & {
+        fill: var(--accent-color);
+    }
+}

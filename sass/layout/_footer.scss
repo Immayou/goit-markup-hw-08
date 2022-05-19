@@ -1,0 +1,30 @@
+.footer {
+    background-color: var(--footer-background-color);
+}
+
+.footer__content {
+    display: flex;
+}
+
+.footer__logo--indent {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer__address {
+    margin-right: 70px;
+}
+
+.footer__connection-content {
+    margin-right: 93px;
+}
+
+.footer__connection-content__title {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.footer__mailing {
+    margin-right: auto;
+}
+

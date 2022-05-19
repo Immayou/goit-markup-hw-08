@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: var(--head-background-color);
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo--indent {
+    margin-right: 94px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.header__contacts-list {
+    margin-left: auto;
+}
+
