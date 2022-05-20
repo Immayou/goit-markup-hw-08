@@ -12,51 +12,73 @@
 
 .properties__list {
     @extend %list;
-
-    @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-right: -15px;
     margin-bottom: -30px;
-    }
+
+    @media screen and (min-width: 480px) {
+        max-width: 480px;
+        padding-left: 15px;
+        padding-right: 15px;
+        }
+        
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+        }
+    
+    @media screen and (min-width: 1200px) {
+        max-width: 1200px;
+        }
+    
+    // @media screen and (min-width: 768px) {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // margin-right: -15px;
+    // }
 }
 
 .properties__item {
     width: 100%;
-
-    @media screen and (min-width: 480px) {
-    width: 450px;
-    }
-
-    @media screen and (min-width: 768px) {
-    // width: 354px;
-    flex-basis: calc(100% - (4 * 15px) / 2);
-    margin-right: 15px;
     margin-bottom: 30px;
-    }
 
-    @media screen and (min-width: 1200px) {
-    width: 270px;
+    // @media screen and (min-width: 480px) {
+    // width: 450px;
+    // }
 
-    }
+    // @media screen and (min-width: 768px) {
+    // // width: 354px;
+    // flex-basis: calc(100% - (4 * 15px) / 2);
+    // margin-right: 15px;
+    // margin-bottom: 30px;
+    // }
+
+    // @media screen and (min-width: 1200px) {
+    // width: 270px;
+
+    // }
 }
 
 .properties__link {
     width: 100%;
     height: 120px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     margin-bottom: 30px;
     border-radius: 4px;
 
     background-color: var(--prorerties-background-color);
 
-    &:not(:last-child) {
-            margin-right: 30px;
-        }
+    // &:not(:last-child) {
+    //         margin-right: 30px;
+    //     }
+}
+
+.properties__link {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
 }
 
 .properties__top-text {
