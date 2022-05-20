@@ -2,7 +2,11 @@
     padding-top: 0;
     padding-bottom: 94px;
 
-    background-color: var(--main-bcg-color);
+    background-color: var(--main-bcg-color); 
+  
+    @media screen and (max-width: 1199px) {
+    display: none;
+    }
 }
 
 .work__title {
