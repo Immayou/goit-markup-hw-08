@@ -17,11 +17,28 @@ address {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .hidden {
@@ -394,35 +411,66 @@ address {
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--hero-text-color);
   margin-top: 0;
   margin-bottom: 30px;
 }
-
-.properties {
-  padding-top: 84px;
-  padding-bottom: 94px;
-  background-color: var(--main-bcg-color);
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
-.properties__list {
-  display: flex;
-  justify-content: center;
+.properties {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--main-bcg-color);
+}
+@media screen and (min-width: 1200px) {
+  .properties {
+    padding-top: 84px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .properties__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -15px;
+    margin-bottom: -30px;
+  }
 }
 
 .properties__item {
-  max-width: 270px;
+  width: 100%;
 }
-.properties__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 480px) {
+  .properties__item {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .properties__item {
+    flex-basis: calc(100% - 30px);
+    margin-right: 15px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .properties__item {
+    width: 270px;
+  }
 }
 
 .properties__link {
-  width: 270px;
+  width: 100%;
   height: 120px;
   display: flex;
   justify-content: center;
