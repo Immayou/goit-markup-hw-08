@@ -320,13 +320,19 @@ address {
   display: block;
   font-family: var(--font-family-secondary);
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -moz-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -ms-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .logo--white, .logo--black {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .address__tel-link,
@@ -784,7 +790,8 @@ address {
 }
 
 .footer__content {
-  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer__logo--indent {
@@ -793,11 +800,17 @@ address {
 }
 
 .footer__address {
-  margin-right: 70px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .footer__connection-content {
-  margin-right: 93px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__connection-content {
+    margin-right: 93px;
+  }
 }
 
 .footer__connection-content__title {
@@ -805,8 +818,10 @@ address {
   margin-bottom: 20px;
 }
 
-.footer__mailing {
-  margin-right: auto;
+@media screen and (min-width: 1200px) {
+  .footer__mailing {
+    margin-right: auto;
+  }
 }
 
 .examples {
@@ -1101,17 +1116,20 @@ address {
   }
 }
 
-.connection-content {
-  padding-top: 72px;
-  padding-bottom: 100px;
-}
-
 .connection-content__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
   color: var(--footer-main-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .connection-content {
+    padding-top: 72px;
+    padding-bottom: 100px;
+  }
 }
 
 .soc-media__list {
@@ -1145,9 +1163,11 @@ address {
   fill: #FFFFFF;
 }
 
-.mailing {
-  padding-top: 72px;
-  padding-bottom: 94px;
+@media screen and (min-width: 1200px) {
+  .mailing {
+    padding-top: 72px;
+    padding-bottom: 94px;
+  }
 }
 
 .mailing__title {
@@ -1157,17 +1177,21 @@ address {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
   color: var(--footer-main-text-color);
 }
 
-.mailing__actions {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .mailing__actions {
+    display: flex;
+  }
 }
 
 .mailing__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   margin-right: 12px;
+  margin-bottom: 20px;
   padding: 15px 16px;
   font-size: 16px;
   line-height: 12.5;
@@ -1210,11 +1234,6 @@ address {
 }
 .mailing__button:hover .mailing__icon, .mailing__button:focus .mailing__icon {
   fill: var(--accent-color);
-}
-
-.address {
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .address__tel-link,
