@@ -30,6 +30,7 @@
     
     @media screen and (min-width: 1200px) {
         max-width: 1200px;
+        margin-right: -30px;
         }
 }
 
@@ -44,6 +45,7 @@
 
     @media screen and (min-width: 1200px) {
     width: calc(100% / 4 - 30px);
+    margin-right: 30px;
     }
 }
 
@@ -79,7 +81,12 @@
 .properties__bottom-text {
     font-size: 14px;
     line-height: 1.71;
+    text-align: justify;
 
     margin-top: 0;
     margin-bottom: 0;
+
+    @media screen and (min-width: 768px) {
+    text-align: start;
+    }
 }

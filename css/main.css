@@ -18,8 +18,7 @@ address {
 
 .container {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -460,6 +459,7 @@ address {
 @media screen and (min-width: 1200px) {
   .properties__list {
     max-width: 1200px;
+    margin-right: -30px;
   }
 }
 
@@ -476,6 +476,7 @@ address {
 @media screen and (min-width: 1200px) {
   .properties__item {
     width: calc(25% - 30px);
+    margin-right: 30px;
   }
 }
 
@@ -510,8 +511,14 @@ address {
 .properties__bottom-text {
   font-size: 14px;
   line-height: 1.71;
+  text-align: justify;
   margin-top: 0;
   margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .properties__bottom-text {
+    text-align: start;
+  }
 }
 
 .work {
@@ -585,16 +592,58 @@ address {
   }
 }
 
+.team__list {
+  margin-bottom: -30px;
+}
+@media screen and (min-width: 480px) {
+  .team__list {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    max-width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    max-width: 1200px;
+    margin-right: -30px;
+  }
+}
+
 .team__item {
+  width: 100%;
+  margin-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .team__item {
+    width: calc(50% - 30px);
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: calc(25% - 30px);
+    margin-right: 30px;
+  }
 }
 
-.team__name,
+.team__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
 .team__position {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -602,7 +651,7 @@ address {
 
 .team__content {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   background-color: var(--team-card-background-color);
 }
 
