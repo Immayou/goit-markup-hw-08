@@ -787,11 +787,22 @@ address {
 
 .footer {
   background-color: var(--footer-background-color);
-}
-
-.footer__content {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__content {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
 
 .footer__logo--indent {
@@ -803,25 +814,25 @@ address {
   text-align: center;
   margin-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .footer__address {
+    text-align: start;
+  }
+}
 
 .footer__connection-content {
   margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .footer__connection-content {
-    margin-right: 93px;
+    margin: 0;
+    text-align: start;
   }
 }
 
 .footer__connection-content__title {
   margin-top: 0px;
   margin-bottom: 20px;
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__mailing {
-    margin-right: auto;
-  }
 }
 
 .examples {
@@ -1124,11 +1135,9 @@ address {
   text-align: center;
   color: var(--footer-main-text-color);
 }
-
 @media screen and (min-width: 1200px) {
-  .connection-content {
-    padding-top: 72px;
-    padding-bottom: 100px;
+  .connection-content__title {
+    text-align: start;
   }
 }
 
@@ -1163,13 +1172,6 @@ address {
   fill: #FFFFFF;
 }
 
-@media screen and (min-width: 1200px) {
-  .mailing {
-    padding-top: 72px;
-    padding-bottom: 94px;
-  }
-}
-
 .mailing__title {
   margin: 0;
   margin-bottom: 20px;
@@ -1180,10 +1182,19 @@ address {
   text-align: center;
   color: var(--footer-main-text-color);
 }
+@media screen and (min-width: 1200px) {
+  .mailing__title {
+    text-align: start;
+  }
+}
 
+.mailing__actions {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 1200px) {
   .mailing__actions {
-    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -1209,6 +1220,18 @@ address {
 }
 .mailing__actions:hover .mailing__input, .mailing__actions:focus .mailing__input {
   border-color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .mailing__input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mailing__input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .mailing__button {

@@ -1,10 +1,20 @@
 .footer {
     background-color: var(--footer-background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .footer__content {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+
+    @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    }
 }
 
 .footer__logo--indent {
@@ -15,12 +25,17 @@
 .footer__address {
     text-align: center;
     margin-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+    text-align: start;
+    }
 }
 
 .footer__connection-content {
     margin-bottom: 60px;
     @media screen and (min-width: 1200px) {
-    margin-right: 93px;
+    margin: 0;
+    text-align: start;
     }
 }
 
@@ -29,11 +44,7 @@
     margin-bottom: 20px;
 }
 
-.footer__mailing {
-    @media screen and (min-width: 1200px) {
-    margin-right: auto;
-    }
-}
+
 
 // .footer {
 //     background-color: var(--footer-background-color);
