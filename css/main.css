@@ -1212,9 +1212,10 @@ address {
 }
 
 .mailing__button {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 .mailing__button:hover, .mailing__button:focus {
   background-color: #FFFFFF;
