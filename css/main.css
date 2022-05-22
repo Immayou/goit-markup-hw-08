@@ -817,6 +817,7 @@ address {
 @media screen and (min-width: 1200px) {
   .footer__address {
     text-align: start;
+    margin: 0;
   }
 }
 
@@ -826,7 +827,6 @@ address {
 @media screen and (min-width: 1200px) {
   .footer__connection-content {
     margin: 0;
-    text-align: start;
   }
 }
 
