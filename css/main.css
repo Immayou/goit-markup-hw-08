@@ -337,7 +337,7 @@ address {
 
 .address__tel-link,
 .address__mail-link,
-.address__postal-link, .navigation__link, .contacts-list__link, .examples-link, .logo--white, .logo--black {
+.address__postal-link, .navigation__link, .contacts-list__link, .logo--white, .logo--black {
   text-decoration: none;
 }
 
@@ -935,6 +935,10 @@ address {
     width: calc(50% - 30px);
     margin-right: 30px;
   }
+  .examples-item:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media screen and (min-width: 1200px) {
   .examples-item {
@@ -980,6 +984,7 @@ address {
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
+  flex-grow: 1;
 }
 
 .examples-title {
