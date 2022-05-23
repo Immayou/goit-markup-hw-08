@@ -505,15 +505,31 @@ address {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: #ffffff;
   z-index: 1;
+}
+.mobile-menu .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
   }
+}
+
+.mobile-menu__nav-item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .mobile-menu__nav-link {
@@ -542,10 +558,15 @@ address {
 
 .mobile-menu__contacts-item {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 25px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__contacts-item {
+    font-size: 34px;
+  }
 }
 
 .mobile-menu__soc-list {
