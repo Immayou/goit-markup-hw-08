@@ -313,7 +313,7 @@ address {
   font-family: var(--font-family-secondary);
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.16;
+  line-height: 1.17;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -moz-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -375,46 +375,82 @@ address {
   color: var(--logo-white-color);
 }
 
-.contacts-list {
-  display: flex;
+.contacts-list__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
-.contacts-list__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .contacts-list__item {
+    margin-right: 30px;
+  }
 }
 
 .contacts-list__link {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--header-btn-text-color);
+  justify-content: start;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  color: var(--header-btn-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .contacts-list__link {
+    font-size: 14px;
+    line-height: 1.14;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 .contacts-list__link:hover, .contacts-list__link:focus {
   color: var(--accent-color);
 }
 
-.contacts-list__icon {
-  margin-right: 10px;
+.contacts-list__icon-envelop,
+.contacts-list__icon-tel {
   fill: var(--header-btn-text-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 8px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts-list__link:hover .contacts-list__icon, .contacts-list__link:focus .contacts-list__icon {
+@media screen and (min-width: 1200px) {
+  .contacts-list__icon-envelop,
+.contacts-list__icon-tel {
+    margin-right: 10px;
+  }
+}
+.contacts-list__link:hover .contacts-list__icon-envelop, .contacts-list__link:focus .contacts-list__icon-envelop,
+.contacts-list__link:hover .contacts-list__icon-tel,
+.contacts-list__link:focus .contacts-list__icon-tel {
   fill: var(--accent-color);
+}
+
+.contacts-list__icon-envelop {
+  width: 14px;
+  height: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts-list__icon-envelop {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.contacts-list__icon-tel {
+  width: 8px;
+  height: 14px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts-list__icon-tel {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .header {
@@ -427,10 +463,26 @@ address {
   padding: 10px 0px;
   display: flex;
 }
+@media screen and (min-width: 768px) {
+  .header__container {
+    justify-content: space-between;
+    padding: 0;
+  }
+}
 @media screen and (min-width: 1200px) {
   .header__container {
-    align-items: center;
     padding: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo--indent {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__logo--indent {
+    margin-right: 93px;
   }
 }
 
@@ -441,6 +493,14 @@ address {
   .header__contacts-list {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts-list {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -1282,11 +1342,6 @@ address {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .navigation__list {
-    display: flex;
-  }
-}
-@media screen and (min-width: 1200px) {
   .navigation__list {
     display: flex;
   }
