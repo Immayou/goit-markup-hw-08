@@ -46,7 +46,7 @@
                         +38096 111 11 11</a>
                 </li>
             </ul>
-            <button type="button" class="mobile-menu__button">
+            <button type="button" class="mobile-menu__button" aria-expanded="false" aria-controls="mobile-menu">
                 <svg class="mobile-menu__icon" width="40" height="40">
                     <use href="./css/icons/symbol-defs.svg#icon-menu"></use>
                 </svg>
@@ -55,9 +55,14 @@
 
         <!-- Mob-menu -->
         
-        <div class="mobile-menu">
-            <div class="container">
-                <div class="mob-monu-top">
+        <div class="mobile-menu is-hidden">
+            <div class="container"> 
+                <div class="mob-menu-top">
+                    <button type="button" class="mobile-menu__close-button" aria-expanded="true" aria-controls="mobile-menu">
+                        <svg class="mobile-menu__close-icon" width="40" height="40">
+                            <use href="./css/icons/symbol-defs.svg#icon-close_menu"></use>
+                        </svg>
+                    </button>
                 <ul class="mobile-menu__nav-list">
                     <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="./index.html">Студия</a></li>
                     <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="./portfolio.html">Портфолио</a>
@@ -85,13 +90,8 @@
                             rel="noopener noreferrer nofollow">Facebook</a></li>
                     <li class="mobile-menu__soc-item"><a class="mobile-menu__soc-link" href="" target="_blank"
                             rel="noopener noreferrer nofollow">LinkedIn</a></li>
-                </ul>
-                </div>
-                <button type="button" class="mobile-menu__close-button">
-                    <svg class="mobile-menu__close-icon" width="40" height="40">
-                        <use href="./css/icons/symbol-defs.svg#icon-close_menu"></use>
-                    </svg>
-                </button>
+                </ul> 
+                </div> 
             </div>
     </header>  
 
@@ -475,6 +475,7 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

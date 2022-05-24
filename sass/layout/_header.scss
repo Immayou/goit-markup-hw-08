@@ -7,20 +7,24 @@
 .header__container {
     padding: 10px 0px;
     display: flex;
-    
+  
     @media screen and (min-width: 1200px) {
     align-items: center;
     padding: 0;
     }
 }
 
-
 .header__contacts-list {
     display: none;
 
-    @media screen and (min-width: 1200px) {
-    margin-left: auto;
+    @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
     }
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 // .header {
