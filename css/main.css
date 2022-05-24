@@ -329,7 +329,7 @@ address {
 
 .address__tel-link,
 .address__mail-link,
-.address__postal-link, .navigation__link, .mobile-menu__soc-link, .mobile-menu__contacts-link, .mobile-menu__nav-link, .contacts-list__link, .logo--white, .logo--black {
+.address__postal-link, .navigation__link, .mobile-menu__soc-link, .mobile-menu__contacts-mail, .mobile-menu__contacts-tel, .mobile-menu__nav-link, .contacts-list__link, .logo--white, .logo--black {
   text-decoration: none;
 }
 
@@ -545,36 +545,71 @@ address {
   -ms-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobile-menu__nav-link.current {
-  color: var(--accent-color);
-}
 .mobile-menu__nav-link:hover, .mobile-menu__nav-link:focus {
   color: var(--accent-color);
 }
 
 .mobile-menu__contacts-list {
+  margin-bottom: 64px;
+}
+
+.mobile-menu__contacts-item:not(:last-child) {
   margin-bottom: 32px;
 }
 
-.mobile-menu__contacts-item {
+.mobile-menu__contacts-tel {
   font-weight: 500;
-  font-size: 25px;
+  font-size: 34px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 480px) {
-  .mobile-menu__contacts-item {
-    font-size: 34px;
-  }
+.mobile-menu__contacts-tel:hover, .mobile-menu__contacts-tel:focus {
+  color: var(--header-btn-text-color);
+}
+
+.mobile-menu__contacts-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--header-btn-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu__contacts-mail:hover, .mobile-menu__contacts-mail:focus {
+  color: var(--accent-color);
 }
 
 .mobile-menu__soc-list {
   display: flex;
 }
 
+.mobile-menu__soc-item:not(:last-child) {
+  padding-right: 5px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__soc-item:not(:last-child) {
+    padding-right: 10px;
+  }
+}
+
+.mobile-menu__soc-item:not(:first-child) {
+  padding-left: 5px;
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__soc-item:not(:first-child) {
+    padding-left: 10px;
+  }
+}
+
 .mobile-menu__soc-link {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu__soc-link:hover, .mobile-menu__soc-link:focus {
+  color: var(--header-btn-text-color);
 }
 
 .container {
