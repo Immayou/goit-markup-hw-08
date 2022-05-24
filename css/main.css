@@ -912,6 +912,7 @@ address {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin-right: -15px;
   margin-bottom: -15px;
 }
