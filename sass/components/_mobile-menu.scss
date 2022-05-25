@@ -65,6 +65,12 @@
     background-color: #ffffff;
     z-index: 1;
 
+    &.is-hidden {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+
     .container {
     height: 100%;
     padding: 15px;
