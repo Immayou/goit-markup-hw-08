@@ -1101,12 +1101,14 @@ address {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: baseline;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__content {
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: baseline;
   }
 }
 
